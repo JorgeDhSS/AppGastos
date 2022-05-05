@@ -9,11 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppGastos">
+        <activity android:name=".NuevaContrasena"></activity>
+        <activity android:name=".RecuperarContrasenaValidacion" />
+        <activity android:name=".RecuperarContrasena" />
         <activity
             android:name=".MainActivity"
+            android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.AppGastos.NoActionBar"
-            android:exported="true">
+            android:theme="@style/Theme.AppGastos.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -18,7 +18,7 @@
         android:text="Datos nuevos"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="34sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,8 +26,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="413dp"
-        android:layout_height="339dp"
+        android:layout_width="408dp"
+        android:layout_height="284dp"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,6 +53,7 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Name"
+            android:textColor="@color/teal_200"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
@@ -78,12 +79,30 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Name"
+            android:textColor="@color/teal_200"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.479"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="210dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/button_background"
+        android:foreground="@android:color/transparent"
+        android:text="Aceptar"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:theme="@style/Widget.MaterialComponents.Button"
+        app:iconTint="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="@color/teal_700" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
