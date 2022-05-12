@@ -9,9 +9,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppGastos">
-        <activity android:name=".NuevaContrasena"></activity>
+        <activity
+            android:name=".RegistroTarjeta"
+            android:exported="false" />
+        <activity android:name=".NuevaContrasena" />
         <activity android:name=".RecuperarContrasenaValidacion" />
         <activity android:name=".RecuperarContrasena" />
+        <activity
+            android:name=".RegistroUsuario"
+            android:exported="false">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PaginaInicio"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Login"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true"
