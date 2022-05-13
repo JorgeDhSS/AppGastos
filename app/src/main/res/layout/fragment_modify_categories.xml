@@ -88,7 +88,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonRegistro"
         android:layout_width="210dp"
         android:layout_height="51dp"
         android:layout_marginBottom="24dp"
