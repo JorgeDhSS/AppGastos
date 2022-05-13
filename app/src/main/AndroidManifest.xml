@@ -9,9 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppGastos">
-        <activity android:name=".NuevaContrasena"></activity>
+        <activity android:name=".NuevaContrasena"/>
         <activity android:name=".RecuperarContrasenaValidacion" />
         <activity android:name=".RecuperarContrasena" />
+        <activity android:name=".ModifyCategoriesFragment" />
+        <activity android:name=".CategoryDelete" />
+        <activity android:name=".RutinaCategorias" />
+        <activity android:name=".RutinaOtrasCategorias" />
+        <activity android:name=".RutinaGastos" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout4"
+    android:id="@+id/rutina_categorias"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RutinaCategorias">
@@ -13,6 +13,7 @@
         android:layout_height="58dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/button_background"
+        android:onClick="onclickBtnToOTherCategories"
         android:text="Siguiente"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

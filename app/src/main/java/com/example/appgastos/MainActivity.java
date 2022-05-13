@@ -1,9 +1,13 @@
 package com.example.appgastos;
 
+import android.app.Fragment;
+import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
 
+import com.example.appgastos.ui.category.CategoryFragment;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -41,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
+                R.id.nav_categories, R.id.nav_rutine, R.id.nav_report)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
@@ -61,5 +65,65 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    public void onClickBtnModify(View v)
+    {
+        Intent activityChangeIntent = new Intent(MainActivity.this, ModifyCategoriesFragment.class);
+        startActivity(activityChangeIntent);
+    }
+    public void onClickBtnDelete(View v)
+    {
+        Intent activityChangeIntent = new Intent(MainActivity.this, CategoryDelete.class);
+        startActivity(activityChangeIntent);
+    }
+
+    public void onClickBtnDiario(View v)
+    {
+        Intent activityChangeIntent = new Intent(MainActivity.this, RutinaCategorias.class);
+        startActivity(activityChangeIntent);
+                /*this.getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.nav_host_fragment_container,RutinaGastos.newInstance("dg", "ew"))
+                        .addToBackStack(null)
+                        .commit();*/
+
+        /*FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.nav_host_fragment_container, RutinaGastos.newInstance("er","er"));
+        transaction.addToBackStack(null);
+
+        // Commit a la transacción
+        transaction.commit();*/
+    }
+    public void onClickBtnSemanal(View v)
+    {
+        Intent activityChangeIntent = new Intent(MainActivity.this, RutinaCategorias.class);
+        startActivity(activityChangeIntent);
+                /*this.getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.nav_host_fragment_container,RutinaGastos.newInstance("dg", "ew"))
+                        .addToBackStack(null)
+                        .commit();*/
+
+        /*FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.nav_host_fragment_container, RutinaGastos.newInstance("er","er"));
+        transaction.addToBackStack(null);
+
+        // Commit a la transacción
+        transaction.commit();*/
+    }
+    public void onClickBtnMensual(View v)
+    {
+        Intent activityChangeIntent = new Intent(MainActivity.this, RutinaCategorias.class);
+        startActivity(activityChangeIntent);
+                /*this.getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.nav_host_fragment_container,RutinaGastos.newInstance("dg", "ew"))
+                        .addToBackStack(null)
+                        .commit();*/
+
+        /*FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.nav_host_fragment_container, RutinaGastos.newInstance("er","er"));
+        transaction.addToBackStack(null);
+
+        // Commit a la transacción
+        transaction.commit();*/
     }
 }
