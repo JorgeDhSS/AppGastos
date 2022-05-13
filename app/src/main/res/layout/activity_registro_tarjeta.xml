@@ -8,31 +8,31 @@
 
     <TextView
         android:id="@+id/textView16"
-        android:layout_width="325dp"
-        android:layout_height="44dp"
+        android:layout_width="330dp"
+        android:layout_height="77dp"
         android:text="Registro de tarjeta bancaria"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.048" />
+        app:layout_constraintVertical_bias="0.024" />
 
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="198dp"
-        android:layout_height="36dp"
-        android:text="Nombre de la tarjeta"
-        android:textSize="16sp"
-        android:textStyle="bold"
+    <EditText
+        android:id="@+id/nombreTarjeta"
+        android:layout_width="323dp"
+        android:layout_height="71dp"
+        android:ems="10"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.201"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.185" />
+        app:layout_constraintVertical_bias="0.312" />
 
     <TextView
         android:id="@+id/textView18"
@@ -43,39 +43,40 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.201"
+        app:layout_constraintHorizontal_bias="0.187"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.437" />
+        app:layout_constraintVertical_bias="0.474" />
 
-    <EditText
-        android:id="@+id/nombreTarjeta"
-        android:layout_width="323dp"
-        android:layout_height="71dp"
-        android:ems="10"
-        android:inputType="textPersonName"
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="198dp"
+        android:layout_height="36dp"
+        android:text="Nombre de la tarjeta"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintHorizontal_bias="0.187"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.272" />
+        app:layout_constraintVertical_bias="0.223" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/saldo"
         android:layout_width="329dp"
         android:layout_height="77dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.524"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.558" />
+        app:layout_constraintVertical_bias="0.597" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonRegistrar"
         android:layout_width="300dp"
         android:layout_height="70dp"
         android:background="@drawable/button_background"
@@ -87,5 +88,5 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.78" />
+        app:layout_constraintVertical_bias="0.906" />
 </androidx.constraintlayout.widget.ConstraintLayout>

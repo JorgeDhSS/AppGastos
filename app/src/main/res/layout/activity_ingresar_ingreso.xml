@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IngresarIngreso">
+
+    <TextView
+        android:id="@+id/textView29"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nuevo Ingreso"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="59dp" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cantidad"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.138"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="134dp" />
+
+    <EditText
+        android:id="@+id/nuevoIngreso"
+        android:layout_width="319dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="160dp" />
+
+    <EditText
+        android:id="@+id/nota"
+        android:layout_width="317dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="           Nota"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="301dp" />
+
+    <Spinner
+        android:id="@+id/efectivo"
+        android:layout_width="314dp"
+        android:layout_height="53dp"
+        tools:layout_editor_absoluteX="46dp"
+        tools:layout_editor_absoluteY="230dp" />
+
+    <Spinner
+        android:id="@+id/calendario"
+        android:layout_width="316dp"
+        android:layout_height="52dp"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="375dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="212dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="97dp"
+        android:text="Guardar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendario" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="53dp"
+        android:layout_height="52dp"
+        app:srcCompat="@drawable/finance_money_coin_bill_cash_payment_icon_141995"
+        tools:layout_editor_absoluteX="46dp"
+        tools:layout_editor_absoluteY="230dp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="65dp"
+        android:layout_height="51dp"
+        app:srcCompat="@drawable/_84697"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="301dp" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="65dp"
+        android:layout_height="52dp"
+        app:srcCompat="@drawable/_143636"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="375dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
