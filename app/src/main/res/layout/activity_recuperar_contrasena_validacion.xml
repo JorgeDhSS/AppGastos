@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editTextPersonName"
         android:layout_width="277dp"
         android:layout_height="52dp"
         android:layout_marginTop="52dp"
@@ -41,8 +41,9 @@
         android:layout_height="51dp"
         android:layout_marginTop="60dp"
         android:background="@drawable/button_background"
+        android:onClick="onClickValidate"
         android:text="Válidar código"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextPersonName" />
 </androidx.constraintlayout.widget.ConstraintLayout>

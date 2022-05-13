@@ -24,7 +24,7 @@
         android:layout_width="326dp"
         android:layout_height="120dp"
         android:layout_marginTop="40dp"
-        android:text="Te enviaremos las instrucciones para recuperar la contraseña al siguiente correo: "
+        android:text="Ingrese el correo al cual se le deba envíar su código de acceso"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,30 +32,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
-    <TextView
-        android:id="@+id/correo"
-        android:layout_width="296dp"
-        android:layout_height="104dp"
-        android:layout_marginTop="28dp"
-        android:text="example@mail.com"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
     <Button
         android:id="@+id/button4"
         android:layout_width="260dp"
         android:layout_height="56dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginBottom="52dp"
         android:background="@drawable/button_background"
+        android:onClick="onClickVerify"
         android:text="El correo es correcto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/correo"
+        android:layout_width="302dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="68dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/correo"
-        app:layout_constraintVertical_bias="0.047" />
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

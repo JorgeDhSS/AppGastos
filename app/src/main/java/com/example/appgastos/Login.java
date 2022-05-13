@@ -5,7 +5,9 @@ import static android.content.ContentValues.TAG;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -84,6 +86,10 @@ public class Login extends AppCompatActivity {
                             FirebaseUser user = mAuth.getCurrentUser();
                             Toast.makeText(getApplicationContext(), "Autenticación correcta",
                                     Toast.LENGTH_SHORT).show();
+                            SharedPreferences datosUsuario = getSharedPreferences("datosUsuario", Context.MODE_PRIVATE);
+                            SharedPreferences.Editor editorPreferenrences = datosUsuario.edit();
+                            editorPreferenrences.putString("mail", Eduser.getText().toString().trim());
+                            editorPreferenrences.commit();
                             startActivity(new Intent(Login.this, MainActivity.class));
                             finish();
                         }else{
