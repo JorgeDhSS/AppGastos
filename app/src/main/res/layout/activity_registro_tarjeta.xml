@@ -62,7 +62,7 @@
         app:layout_constraintVertical_bias="0.272" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/saldo"
         android:layout_width="329dp"
         android:layout_height="77dp"
         android:ems="10"
@@ -75,7 +75,7 @@
         app:layout_constraintVertical_bias="0.558" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonRegistrar"
         android:layout_width="300dp"
         android:layout_height="70dp"
         android:background="@drawable/button_background"
