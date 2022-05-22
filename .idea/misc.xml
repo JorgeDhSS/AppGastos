@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/WIN 10/Documents/Proyecto Movil/AppGastos/app/src/main/res/layout/activity_anuncios.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/WIN 10/Documents/Proyecto Movil/AppGastos/app/src/main/res/layout/activity_ingresar_gasto.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/WIN 10/Documents/Proyecto Movil/AppGastos/app/src/main/res/layout/activity_ingresar_gasto_final.xml" value="0.1" />
+        <entry key="..\:/Users/WIN 10/Documents/Proyecto Movil/AppGastos/app/src/main/res/layout/activity_lista_tarjetas.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/WIN 10/Documents/Proyecto Movil/AppGastos/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/Users/WIN 10/Documents/Proyecto Movil/AppGastos/app/src/main/res/layout/activity_pagina_inicio.xml" value="0.1621376811594203" />
         <entry key="..\:/Users/WIN 10/Documents/Proyecto Movil/AppGastos/app/src/main/res/layout/activity_registro_tarjeta.xml" value="0.25" />

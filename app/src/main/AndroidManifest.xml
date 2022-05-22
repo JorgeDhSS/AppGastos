@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppGastos">
-        <activity android:name=".NuevaContrasena"/>
+        <activity
+            android:name=".ListaTarjetas"
+            android:exported="false" />
+        <activity android:name=".NuevaContrasena" />
         <activity android:name=".RecuperarContrasenaValidacion" />
         <activity android:name=".RecuperarContrasena" />
         <activity android:name=".ModifyCategoriesFragment" />
@@ -36,6 +39,7 @@
             android:exported="true">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
+
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>

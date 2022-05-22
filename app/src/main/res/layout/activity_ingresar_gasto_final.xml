@@ -14,7 +14,8 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="216dp" />
+        tools:layout_editor_absoluteY="216dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView40"
@@ -23,7 +24,8 @@
         android:text="Nuevo Gasto"
         android:textSize="16sp"
         tools:layout_editor_absoluteX="51dp"
-        tools:layout_editor_absoluteY="26dp" />
+        tools:layout_editor_absoluteY="26dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView41"
@@ -34,7 +36,8 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="81dp" />
+        tools:layout_editor_absoluteY="81dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView12"
@@ -43,8 +46,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/_90844"
-        tools:layout_editor_absoluteY="266dp" />
+
+        tools:layout_editor_absoluteY="266dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView43"
@@ -54,7 +58,8 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="388dp" />
+        tools:layout_editor_absoluteY="388dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView44"
@@ -64,7 +69,8 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="444dp" />
+        tools:layout_editor_absoluteY="444dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/editTextTextPersonName6"
@@ -75,7 +81,8 @@
         android:text="        Nota"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="494dp" />
+        tools:layout_editor_absoluteY="494dp"
+        tools:ignore="MissingConstraints" />
 
     <Spinner
         android:id="@+id/spinner"
@@ -83,21 +90,24 @@
         android:layout_height="43dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="558dp" />
+        tools:layout_editor_absoluteY="558dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView13"
         android:layout_width="44dp"
         android:layout_height="44dp"
-        app:srcCompat="@drawable/_84697"
+
         tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="494dp" />
+        tools:layout_editor_absoluteY="494dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView14"
         android:layout_width="51dp"
         android:layout_height="42dp"
-        app:srcCompat="@drawable/_922888"
+
         tools:layout_editor_absoluteX="62dp"
-        tools:layout_editor_absoluteY="558dp" />
+        tools:layout_editor_absoluteY="558dp"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
