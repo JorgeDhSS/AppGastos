@@ -11,158 +11,188 @@
         android:id="@+id/saldoTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
         android:text="$1,875.00"
         android:textColor="#000000"
         android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="112dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView46"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
         android:text="Saldo Total"
         android:textColor="#0A6C63"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="184dp" />
+        app:layout_constraintTop_toBottomOf="@+id/saldoTotal" />
 
     <Spinner
         android:id="@+id/eleccionTarjeta2"
         android:layout_width="320dp"
         android:layout_height="45dp"
+        android:layout_marginTop="34dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="245dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView46" />
 
     <ImageView
         android:id="@+id/imageView15"
         android:layout_width="48dp"
         android:layout_height="45dp"
-        app:srcCompat="@drawable/finance_money_coin_bill_cash_payment_icon_141995"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="245dp" />
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView46"
+        app:srcCompat="@drawable/button_background" />
 
     <TextView
         android:id="@+id/textView47"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="168dp"
         android:text="Tarjeta bancaria"
         android:textColor="#201D1D"
-        tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="261dp" />
+        app:layout_constraintEnd_toEndOf="@+id/eleccionTarjeta2"
+        app:layout_constraintTop_toTopOf="@+id/eleccionTarjeta2" />
 
     <TextView
         android:id="@+id/textView48"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="20dp"
         android:text="Balance mensual"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="49dp"
-        tools:layout_editor_absoluteY="331dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eleccionTarjeta2" />
 
     <TextView
         android:id="@+id/textView49"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="32dp"
         android:text="Ingreso:"
         android:textAlignment="textEnd"
         android:textColor="#000000"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="123dp"
-        tools:layout_editor_absoluteY="368dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView48" />
 
     <TextView
         android:id="@+id/textView50"
         android:layout_width="52dp"
         android:layout_height="27dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="16dp"
         android:text="Gasto:"
         android:textAlignment="textEnd"
         android:textColor="#020202"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="407dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView49" />
 
     <TextView
         android:id="@+id/textView52"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="96dp"
         android:text="$2,000.00"
         android:textAlignment="textEnd"
         android:textColor="#000000"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="238dp"
-        tools:layout_editor_absoluteY="371dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView48" />
 
     <TextView
         android:id="@+id/textView53"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="96dp"
         android:text="$125.00"
         android:textAlignment="textEnd"
         android:textColor="#000000"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="251dp"
-        tools:layout_editor_absoluteY="410dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView52" />
 
     <TextView
         android:id="@+id/textView54"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="100dp"
         android:text="$1,875.00"
         android:textAlignment="textEnd"
         android:textColor="#000000"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="238dp"
-        tools:layout_editor_absoluteY="450dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView53" />
 
     <TextView
         android:id="@+id/textView51"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="14dp"
         android:text="Saldo actual:"
         android:textAlignment="textEnd"
         android:textColor="#000000"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="84dp"
-        tools:layout_editor_absoluteY="450dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView50" />
 
     <ImageView
         android:id="@+id/imageView16"
         android:layout_width="23dp"
         android:layout_height="23dp"
-        app:srcCompat="@drawable/notification_add_114436"
-        tools:layout_editor_absoluteX="320dp"
-        tools:layout_editor_absoluteY="373dp" />
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="68dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView48"
+        app:srcCompat="@drawable/button_background" />
 
     <ImageView
         android:id="@+id/imageView17"
         android:layout_width="23dp"
         android:layout_height="23dp"
-        app:srcCompat="@drawable/notification_remove_114427"
-        tools:layout_editor_absoluteX="320dp"
-        tools:layout_editor_absoluteY="411dp" />
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="72dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView16"
+        app:srcCompat="@drawable/button_background" />
 
     <Button
         android:id="@+id/button19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="80dp"
         android:text="INGRESOS"
-        tools:layout_editor_absoluteX="64dp"
-        tools:layout_editor_absoluteY="557dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView51" />
 
     <Button
         android:id="@+id/button20"
         android:layout_width="110dp"
         android:layout_height="48dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="68dp"
         android:text="GASTOS"
-        tools:layout_editor_absoluteX="233dp"
-        tools:layout_editor_absoluteY="557dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView54" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

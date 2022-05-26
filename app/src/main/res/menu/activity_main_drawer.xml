@@ -16,5 +16,8 @@
             android:id="@+id/nav_report"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Reporte de gastos" />
+        <item
+            android:id="@+id/nav_cards"
+            android:title="nav_cards" />
     </group>
 </menu>

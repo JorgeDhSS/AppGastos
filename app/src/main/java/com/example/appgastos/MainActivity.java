@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_categories, R.id.nav_rutine, R.id.nav_report)
+                R.id.nav_categories, R.id.nav_rutine, R.id.nav_report, R.id.nav_cards)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
@@ -67,20 +67,52 @@ public class MainActivity extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 
-    public void onClickBtnModify(View v)
+    public void onClickBtnAlimentos(View v)
     {
         Intent activityChangeIntent = new Intent(MainActivity.this, ModifyCategoriesFragment.class);
+        activityChangeIntent.putExtra("Category", "Alimentos");
         startActivity(activityChangeIntent);
     }
-    public void onClickBtnDelete(View v)
+
+    public void onClickBtnTransporte(View v)
     {
-        Intent activityChangeIntent = new Intent(MainActivity.this, CategoryDelete.class);
+        Intent activityChangeIntent = new Intent(MainActivity.this, ModifyCategoriesFragment.class);
+        activityChangeIntent.putExtra("Category", "Transportes");
+        startActivity(activityChangeIntent);
+    }
+
+    public void onClickBtnMedicamentos(View v)
+    {
+        Intent activityChangeIntent = new Intent(MainActivity.this, ModifyCategoriesFragment.class);
+        activityChangeIntent.putExtra("Category", "Medicamentos");
+        startActivity(activityChangeIntent);
+    }
+
+    public void onClickBtnVivienda(View v)
+    {
+        Intent activityChangeIntent = new Intent(MainActivity.this, ModifyCategoriesFragment.class);
+        activityChangeIntent.putExtra("Category", "Vivienda");
+        startActivity(activityChangeIntent);
+    }
+
+    public void onClickBtnOcio(View v)
+    {
+        Intent activityChangeIntent = new Intent(MainActivity.this, ModifyCategoriesFragment.class);
+        activityChangeIntent.putExtra("Category", "Ocio");
+        startActivity(activityChangeIntent);
+    }
+
+    public void onClickBtnOtros(View v)
+    {
+        Intent activityChangeIntent = new Intent(MainActivity.this, ModifyCategoriesFragment.class);
+        activityChangeIntent.putExtra("Category", "Otros");
         startActivity(activityChangeIntent);
     }
 
     public void onClickBtnDiario(View v)
     {
         Intent activityChangeIntent = new Intent(MainActivity.this, RutinaCategorias.class);
+        activityChangeIntent.putExtra("periodo", "Diario");
         startActivity(activityChangeIntent);
                 /*this.getSupportFragmentManager().beginTransaction()
                         .replace(R.id.nav_host_fragment_container,RutinaGastos.newInstance("dg", "ew"))
@@ -97,6 +129,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClickBtnSemanal(View v)
     {
         Intent activityChangeIntent = new Intent(MainActivity.this, RutinaCategorias.class);
+        activityChangeIntent.putExtra("periodo", "Semanal");
         startActivity(activityChangeIntent);
                 /*this.getSupportFragmentManager().beginTransaction()
                         .replace(R.id.nav_host_fragment_container,RutinaGastos.newInstance("dg", "ew"))
@@ -113,6 +146,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClickBtnMensual(View v)
     {
         Intent activityChangeIntent = new Intent(MainActivity.this, RutinaCategorias.class);
+        activityChangeIntent.putExtra("periodo", "Mensual");
         startActivity(activityChangeIntent);
                 /*this.getSupportFragmentManager().beginTransaction()
                         .replace(R.id.nav_host_fragment_container,RutinaGastos.newInstance("dg", "ew"))

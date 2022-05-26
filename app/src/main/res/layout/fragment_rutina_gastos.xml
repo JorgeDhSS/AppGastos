@@ -6,7 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RutinaGastos">
-
+    <data>
+        <variable
+            name="mainUser"
+            type ="String"
+            tools:ignore="MissingPrefix" />
+    </data>
     <include
         android:id="@+id/include4"
         layout="@layout/progresslayout"

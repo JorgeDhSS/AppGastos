@@ -19,114 +19,159 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ScrollView
-        android:id="@+id/scrollcategory"
-        android:layout_width="341dp"
-        android:layout_height="456dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_login"
+    <TableLayout
+        android:layout_width="324dp"
+        android:layout_height="396dp"
+        android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textCategory">
 
-        <TableLayout
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
-            <TableRow
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <ImageButton
                     android:id="@+id/imageButton2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:onClick="onClickBtnAlimentos"
+                    android:src="@mipmap/ic_category_alimentos_foreground"
+                    tools:src="@mipmap/ic_category_alimentos_foreground" />
+
+                <TextView
+                    android:id="@+id/textView64"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:src="@tools:sample/avatars" />
+                    android:text="Alimentos"
+                    android:textColor="@color/teal_700"
+                    android:textSize="20sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
                 <ImageButton
                     android:id="@+id/imageButton"
+                    android:layout_width="162dp"
+                    android:layout_height="match_parent"
+                    android:onClick="onClickBtnMedicamentos"
+                    android:src="@mipmap/ic_category_medicamentos_foreground"
+                    tools:src="@mipmap/ic_category_medicamentos_foreground" />
+
+                <TextView
+                    android:id="@+id/textView65"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:src="@tools:sample/avatars" />
-            </TableRow>
+                    android:text="Medicamentos"
+                    android:textColor="@color/teal_700"
+                    android:textSize="20sp" />
+            </FrameLayout>
 
-            <TableRow
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <ImageButton
                     android:id="@+id/imageButton4"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickBtnOcio"
+                    android:src="@mipmap/ic_category_ocio_foreground"
+                    tools:src="@mipmap/ic_category_ocio_foreground" />
+
+                <TextView
+                    android:id="@+id/textView66"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:src="@tools:sample/avatars" />
+                    android:text="Ocio"
+                    android:textColor="@color/teal_700"
+                    android:textSize="20sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
                 <ImageButton
                     android:id="@+id/imageButton3"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickBtnTransporte"
+                    android:src="@mipmap/ic_category_transporte_foreground"
+                    tools:src="@mipmap/ic_category_transporte_foreground" />
+
+                <TextView
+                    android:id="@+id/textView67"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:src="@tools:sample/avatars" />
-            </TableRow>
+                    android:text="Transporte"
+                    android:textColor="@color/teal_700"
+                    android:textSize="20sp" />
+            </FrameLayout>
 
-            <TableRow
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <ImageButton
                     android:id="@+id/imageButton6"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickBtnVivienda"
+                    android:src="@mipmap/ic_category_vivienda_foreground"
+                    tools:src="@mipmap/ic_category_vivienda_foreground" />
+
+                <TextView
+                    android:id="@+id/textView68"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:src="@tools:sample/avatars" />
+                    android:text="Vivienda"
+                    android:textColor="@color/teal_700"
+                    android:textSize="20sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
                 <ImageButton
                     android:id="@+id/imageButton5"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickBtnOtros"
+                    android:src="@mipmap/ic_category_other_foreground"
+                    tools:src="@mipmap/ic_category_other_foreground" />
+
+                <TextView
+                    android:id="@+id/textView69"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:src="@tools:sample/avatars" />
-            </TableRow>
+                    android:text="Otros"
+                    android:textColor="@color/teal_700"
+                    android:textSize="20sp" />
+            </FrameLayout>
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+        </TableRow>
 
-                <ImageButton
-                    android:id="@+id/imageButton8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    tools:src="@tools:sample/avatars" />
+    </TableLayout>
 
-                <ImageButton
-                    android:id="@+id/imageButton7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    tools:src="@tools:sample/avatars" />
-            </TableRow>
-        </TableLayout>
-    </ScrollView>
-
-    <Button
-        android:id="@+id/btn_login"
-        android:layout_width="274dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/button_background"
-        android:backgroundTint="@color/teal_700"
-        android:onClick="onClickBtnModify"
-        android:text="@string/modificar"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="280dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/button_background"
-        android:onClick="onClickBtnDelete"
-        android:text="@string/eliminar"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

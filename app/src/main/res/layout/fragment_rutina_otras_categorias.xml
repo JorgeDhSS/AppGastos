@@ -31,7 +31,7 @@
         app:layout_constraintTop_toBottomOf="@+id/include3" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/editTextNameCateExtra"
         android:layout_width="350dp"
         android:layout_height="48dp"
         android:layout_marginTop="16dp"
@@ -74,11 +74,12 @@
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/teal_200"
+        android:onClick="onclickBtnAddCategory"
         android:text="Agregar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNameCateExtra" />
 
     <ScrollView
         android:id="@+id/scrollView3"
@@ -89,50 +90,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView24">
 
-        <LinearLayout
+        <ListView
+            android:id="@+id/listViewCategories"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView25"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/teal_700"
-                android:textSize="24sp" />
-
-            <View
-                android:id="@+id/divider3"
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:background="@color/teal_700"
-                android:backgroundTint="@color/teal_700" />
-
-            <TextView
-                android:id="@+id/textView26"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/teal_700"
-                android:textSize="24sp" />
-
-            <View
-                android:id="@+id/divider4"
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:background="@color/teal_700"
-                android:backgroundTint="@color/teal_700" />
-
-            <TextView
-                android:id="@+id/textView27"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/teal_700"
-                android:textSize="24sp" />
-
-        </LinearLayout>
+            android:layout_height="wrap_content" />
     </ScrollView>
 
     <Button

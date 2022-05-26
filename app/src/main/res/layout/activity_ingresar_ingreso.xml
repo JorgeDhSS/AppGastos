@@ -11,59 +11,67 @@
         style="@style/Widget.AppCompat.TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
         android:text="Nuevo Ingreso"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="59dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView30"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="Cantidad"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.138"
+        app:layout_constraintHorizontal_bias="0.142"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="134dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView29" />
 
     <EditText
         android:id="@+id/nuevoIngreso"
         android:layout_width="319dp"
         android:layout_height="48dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="160dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView30" />
 
     <EditText
         android:id="@+id/nota"
         android:layout_width="317dp"
         android:layout_height="50dp"
+        android:layout_marginTop="18dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="           Nota"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="301dp" />
+        app:layout_constraintTop_toBottomOf="@+id/efectivo" />
 
     <Spinner
         android:id="@+id/efectivo"
         android:layout_width="314dp"
         android:layout_height="53dp"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="230dp" />
+        android:layout_marginTop="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nuevoIngreso" />
 
     <Spinner
         android:id="@+id/calendario"
         android:layout_width="316dp"
         android:layout_height="52dp"
-        tools:layout_editor_absoluteX="47dp"
-        tools:layout_editor_absoluteY="375dp" />
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nota" />
 
     <Button
         android:id="@+id/button"
@@ -80,24 +88,29 @@
         android:id="@+id/imageView5"
         android:layout_width="53dp"
         android:layout_height="52dp"
-        app:srcCompat="@drawable/finance_money_coin_bill_cash_payment_icon_141995"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="230dp" />
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="260dp"
+        app:layout_constraintEnd_toEndOf="@+id/efectivo"
+        app:layout_constraintTop_toTopOf="@+id/efectivo"
+        app:srcCompat="@drawable/button_background" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="65dp"
         android:layout_height="51dp"
-        app:srcCompat="@drawable/_84697"
-        tools:layout_editor_absoluteX="42dp"
-        tools:layout_editor_absoluteY="301dp" />
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="252dp"
+        app:layout_constraintEnd_toEndOf="@+id/nota"
+        app:layout_constraintTop_toTopOf="@+id/nota"
+        app:srcCompat="@drawable/button_background" />
 
     <ImageView
         android:id="@+id/imageView7"
         android:layout_width="65dp"
         android:layout_height="52dp"
-        app:srcCompat="@drawable/_143636"
-        tools:layout_editor_absoluteX="42dp"
-        tools:layout_editor_absoluteY="375dp" />
+        android:layout_marginTop="1dp"
+        app:layout_constraintStart_toStartOf="@+id/calendario"
+        app:layout_constraintTop_toTopOf="@+id/calendario"
+        app:srcCompat="@drawable/button_background" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,86 +10,98 @@
         android:id="@+id/textView42"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:text="$xxx.xxx pesos en"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="216dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView41" />
 
     <TextView
         android:id="@+id/textView40"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="103dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="16dp"
         android:text="Nuevo Gasto"
         android:textSize="16sp"
-        tools:layout_editor_absoluteX="51dp"
-        tools:layout_editor_absoluteY="26dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView41"
         android:layout_width="296dp"
         android:layout_height="90dp"
+        android:layout_marginTop="32dp"
         android:text="La aplicación tiene conocimiento de que usted gasta"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="81dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView40" />
 
     <ImageView
         android:id="@+id/imageView12"
         android:layout_width="94dp"
         android:layout_height="102dp"
+        android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/_90844"
-        tools:layout_editor_absoluteY="266dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView42"
+        app:srcCompat="@mipmap/ic_category_alimentos_foreground" />
 
     <TextView
         android:id="@+id/textView43"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:text="Ocio"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="388dp" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView12" />
 
     <TextView
         android:id="@+id/textView44"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
         android:text="Complete los siguientes datos"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="444dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView43" />
 
     <EditText
         android:id="@+id/editTextTextPersonName6"
         android:layout_width="273dp"
         android:layout_height="43dp"
+        android:layout_marginTop="18dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="        Nota"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="494dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView44" />
 
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="273dp"
         android:layout_height="43dp"
+        android:layout_marginTop="21dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="558dp" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
 
     <ImageView
         android:id="@+id/imageView13"
         android:layout_width="44dp"
         android:layout_height="44dp"
-        app:srcCompat="@drawable/_84697"
+        app:srcCompat="@drawable/button_background"
         tools:layout_editor_absoluteX="69dp"
         tools:layout_editor_absoluteY="494dp" />
 
@@ -97,7 +109,7 @@
         android:id="@+id/imageView14"
         android:layout_width="51dp"
         android:layout_height="42dp"
-        app:srcCompat="@drawable/_922888"
+        app:srcCompat="@drawable/button_background"
         tools:layout_editor_absoluteX="62dp"
         tools:layout_editor_absoluteY="558dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,7 +7,7 @@
     tools:context=".RegistroUsuario">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textViewCategory"
         android:layout_width="369dp"
         android:layout_height="49dp"
         android:text="Registro  de Usuario"
@@ -21,7 +21,7 @@
         app:layout_constraintVertical_bias="0.049" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textViewGasto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Correo electronico"

@@ -14,7 +14,9 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.appgastos.CategoryDelete;
+import com.example.appgastos.MainActivity;
 import com.example.appgastos.ModifyCategoriesFragment;
+import com.example.appgastos.RutinaCategorias;
 import com.example.appgastos.databinding.FragmentCategoryBinding;
 
 public class  CategoryFragment extends Fragment {
@@ -45,5 +47,6 @@ public class  CategoryFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+
 
 }
