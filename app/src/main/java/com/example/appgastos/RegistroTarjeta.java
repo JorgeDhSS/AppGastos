@@ -31,6 +31,14 @@ public class RegistroTarjeta extends AppCompatActivity {
     private String nombre = " ";
     private String cantidad = " ";
 
+    //FirebaseDatabase database = FirebaseDatabase.getInstance();
+    private DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+
+    private DatabaseReference usersRef = ref.child("users");
+    private String id_usuarioR = getIntent().getStringExtra("id_usuario");
+
+
+
 
 
     @Override
@@ -39,6 +47,7 @@ public class RegistroTarjeta extends AppCompatActivity {
         setContentView(R.layout.activity_registro_tarjeta);
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
+
 
 
         Ednombre = findViewById(R.id.nombreTarjeta);
@@ -72,12 +81,25 @@ public class RegistroTarjeta extends AppCompatActivity {
 
 
     public void registrarTarjeta(){
+        String ruta = id_usuarioR+"/Tarjetas";
+
+        //DatabaseReference hopperRef = usersRef.child("Tarjetas");
+
         Map<String, Object> map = new HashMap<>();
         map.put("nombre", nombre);
         map.put("saldo", cantidad);
+        //hopperRef.updateChildren(map);
+
+        Map<String, Object> userUpdates = new HashMap<>();
+        userUpdates.put(ruta, map);
+
+        usersRef.updateChildren(userUpdates);
+
+        startActivity(new Intent(RegistroTarjeta.this, MainActivity.class));
+        finish();
 
 
-        mDatabase.child("Tarjetas").push().setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+        /*mDatabase.child("Users").push().setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task2) {
                 if (task2.isSuccessful()){
@@ -87,6 +109,6 @@ public class RegistroTarjeta extends AppCompatActivity {
                     Toast.makeText(RegistroTarjeta.this, "No se pudieron crear los datos correctamente", Toast.LENGTH_SHORT).show();
                 }
             }
-        });
+        });*/
     }
 }

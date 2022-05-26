@@ -96,20 +96,27 @@ public class RegistroUsuario extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
 
+                    String id = mAuth.getCurrentUser().getUid();
+
                     Map<String, Object> map = new HashMap<>();
+                    map.put("id", id);
                     map.put("nombre", nombre);
                     map.put("edad", edad);
                     map.put("email", email);
                     map.put("password", password);
-
-                    String id = mAuth.getCurrentUser().getUid();
+                    map.put("Tarjetas", " ");
 
                     mDatabase.child("Users").child(id).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task2) {
                             if (task2.isSuccessful()){
-                                startActivity(new Intent(RegistroUsuario.this, MainActivity.class));
+
+                                Intent intent = new Intent(RegistroUsuario.this, RegistroTarjeta.class);
+                                intent.putExtra("id_usuario", id);
+                                startActivity(intent);
                                 finish();
+                                //startActivity(new Intent(RegistroUsuario.this, MainActivity.class));
+
                             }else{
                                 Toast.makeText(RegistroUsuario.this, "No se pudieron crear los datos correctamente", Toast.LENGTH_SHORT).show();
 
