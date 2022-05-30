@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_categories">
+    app:startDestination="@id/paginaPricipal">
 
     <fragment
         android:id="@+id/nav_categories"
@@ -22,4 +22,9 @@
         android:name="com.example.appgastos.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/paginaPricipal"
+        android:name="com.example.appgastos.ui.PaginaPrincipal.PaginaPrincipalFragment"
+        android:label="fragment_pagina_pricipal"
+        tools:layout="@layout/fragment_pagina_principal" />
 </navigation>

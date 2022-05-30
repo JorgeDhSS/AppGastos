@@ -12,15 +12,9 @@ public class PaginaPrincipal extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pagina_principal);
-        Button btn_ingreso = findViewById(R.id.btn_ingreso);
-        btn_ingreso.setOnClickListener(view -> {
-            this.ingresarIngreso();
-        });
+        setContentView(R.layout.fragment_pagina_principal);
+
     }
 
-    private void ingresarIngreso(){
-        Intent ingreso = new Intent(this,IngresarIngreso.class);
-        startActivity(ingreso);
-    }
+
 }
