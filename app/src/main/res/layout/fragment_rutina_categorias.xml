@@ -113,9 +113,7 @@
                             android:id="@+id/imageButtonAlimentos"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:onClick="onclickBtnAlimentos"
-                            android:src="@mipmap/ic_category_alimentos_foreground"
-                            tools:src="@mipmap/ic_category_alimentos_foreground" />
+                            android:onClick="onclickBtnAlimentos" />
 
                     </LinearLayout>
 
