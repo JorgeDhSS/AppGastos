@@ -19,7 +19,7 @@ public class IngresarGastoCategoria extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ingresar_gasto_categoria);
-        spinnerTitles = new String[]{"Alimentos", "Medicamentos", "Ocio", "Transporte", "Vivienda", "Otros"};
+        spinnerTitles = new String[]{"Alimentos", "Medicamentos", "Ocio", "Transportes", "Vivienda", "Otros"};
         spinnerImages = new int[]{R.mipmap.ic_category_alimentos_foreground
                 , R.mipmap.ic_category_medicamentos_foreground
                 , R.mipmap.ic_category_ocio_foreground
@@ -34,10 +34,11 @@ public class IngresarGastoCategoria extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView adapterView, View view, int i, long l) {
                 if (isUserInteracting) {
-                    Intent intent = new Intent(IngresarGastoCategoria.this, IngresarGastoCategoria.class);
-                    intent.putExtra("category", spinnerTitles[i]);
-                    startActivity(intent);
                     Toast.makeText(IngresarGastoCategoria.this, spinnerTitles[i], Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(IngresarGastoCategoria.this, IngresarGasto.class);
+                    intent.putExtra("category", spinnerTitles[i]);
+                    intent.putExtra("categoryImage", spinnerImages[i]);
+                    startActivity(intent);
                 }
             }
 

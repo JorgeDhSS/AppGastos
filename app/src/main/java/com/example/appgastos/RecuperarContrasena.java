@@ -34,8 +34,8 @@ public class RecuperarContrasena extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        emailText = findViewById(R.id.correo);
         setContentView(R.layout.activity_recuperar_contrasena);
+        emailText = findViewById(R.id.correo);
     }
 
     public void onClickVerify(View v) {
