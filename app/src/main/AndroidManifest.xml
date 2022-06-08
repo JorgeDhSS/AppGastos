@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppGastos">
-        <activity android:name=".IngresarGastoCategoria"></activity>
-        <activity android:name=".IngresarGasto"></activity>
-        <activity android:name=".IngresarGastoFinal"></activity>
+        <activity android:name=".MenuTarjetas"></activity>
+        <activity android:name=".IngresarGastoCategoria" />
+        <activity android:name=".IngresarGasto" />
+        <activity android:name=".IngresarGastoFinal" />
         <activity
             android:name=".ListaTarjetas"
             android:exported="false" />

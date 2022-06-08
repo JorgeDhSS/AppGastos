@@ -4,6 +4,8 @@ import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 
@@ -64,6 +66,20 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Log.i("ActionBar", "Settings!");
+        String id = String.valueOf(item.getTitle());
+        Log.i("ID", String.valueOf(id));
+        /*if (id == R.id.nav_cards) {
+            Log.i("ActionBar", "Settings!");
+            Intent about = new Intent(MainActivity.this, MenuTarjetas.class);
+            startActivity(about);
+            return true;
+        }*/
+
+        return super.onOptionsItemSelected(item);
     }
 
     public void onClickBtnAlimentos(View v)

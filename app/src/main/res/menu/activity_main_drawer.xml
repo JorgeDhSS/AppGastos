@@ -6,18 +6,19 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_categories"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_rutina_form"
             android:title="Rutina de gastos" />
         <item
             android:id="@+id/nav_rutine"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_category_menu"
             android:title="Categorías" />
         <item
             android:id="@+id/nav_report"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_report"
             android:title="Reporte de gastos" />
         <item
             android:id="@+id/nav_cards"
-            android:title="nav_cards" />
+            android:icon="@drawable/ic_cards"
+            android:title="Tarjetas" />
     </group>
 </menu>
