@@ -4,16 +4,25 @@ public class Tarjeta {
 
     private String nombre;
     private String cantidad;
+    private String uid;
 
     public Tarjeta() {
 
     }
 
-    public Tarjeta(String nombre, String cantidad) {
+    public Tarjeta(String uid, String nombre, String cantidad) {
         this.nombre = nombre;
         this.cantidad = cantidad;
+        this.uid = uid;
     }
 
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
     public String getCantidad() {
         return cantidad;
     }

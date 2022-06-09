@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -16,8 +18,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -28,14 +33,13 @@ import java.util.UUID;
 
 public class MenuTarjetas extends AppCompatActivity {
 
-    DatabaseReference mDatabase;
+    FirebaseDatabase mDatabase;
     FirebaseAuth mAuth;
     DatabaseReference userReference;
 
     EditText Textnombre, Textcantidad;
 
-    String nameCard = " ";
-    String cantidadCard = " ";
+    Tarjeta tarjetSelected;
 
     ListView listV_Cards;
 
@@ -54,19 +58,44 @@ public class MenuTarjetas extends AppCompatActivity {
 
         inicializarFirebase();
         listarDatos();
-        //userReference = mDatabase.child("Users").child(mAuth.getUid()).child("Tarjetas");
-        //userReference = mDatabase.child("Users").child(mAuth.getUid());
+
+        listV_Cards.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                tarjetSelected =  (Tarjeta) parent.getItemAtPosition(position);
+                Textnombre.setText(tarjetSelected.getNombre());
+                Textcantidad.setText(tarjetSelected.getCantidad());
+            }
+        });
 
     }
 
     private void inicializarFirebase(){
         mAuth = FirebaseAuth.getInstance();
-        mDatabase = FirebaseDatabase.getInstance().getReference();
-        userReference =  mDatabase.child("Users").child(mAuth.getUid());
+        mDatabase = FirebaseDatabase.getInstance();
+        mDatabase.setPersistenceEnabled(true);
+        userReference = mDatabase.getReference();
     }
 
     private void listarDatos(){
+        userReference.child("Users").child(mAuth.getUid()).child("Tarjetas").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                listCard.clear();
+                for(DataSnapshot objSnapshot : snapshot.getChildren()){
+                    Tarjeta t = objSnapshot.getValue(Tarjeta.class);
+                    listCard.add(t);
 
+                    arrayAdapterTarjet = new ArrayAdapter<Tarjeta>(MenuTarjetas.this, android.R.layout.simple_list_item_1, listCard);
+                    listV_Cards.setAdapter(arrayAdapterTarjet);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 
     @Override
@@ -86,18 +115,16 @@ public class MenuTarjetas extends AppCompatActivity {
                     if (nombre.length() > 0 ){
 
                         Tarjeta t = new Tarjeta();
-                        t.setCantidad(cantidad);
                         t.setNombre(nombre);
-                        mDatabase.child("Users").child(mAuth.getUid()).child("Tarjetas").push().setValue(t).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        t.setCantidad(cantidad);
+                        t.setUid(UUID.randomUUID().toString());
+                        userReference.child("Users").child(mAuth.getUid()).child("Tarjetas").child(t.getUid()).setValue(t).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull @NotNull Task<Void> task) {
                                 Toast.makeText(MenuTarjetas.this, "Tarjeta agregada", Toast.LENGTH_LONG).show();
                                 limpiarCajas();
                             }
                         });
-
-
-
                     }else{
                         Toast.makeText(this, "El nombre debe tener al menos 1 caracter", Toast.LENGTH_SHORT).show();
                     }
@@ -108,12 +135,23 @@ public class MenuTarjetas extends AppCompatActivity {
             }
 
             case R.id.icon_save:{
-                Toast.makeText(this, "Actualizar", Toast.LENGTH_LONG).show();
+                Tarjeta t = new Tarjeta();
+                t.setUid(tarjetSelected.getUid());
+                t.setNombre(Textnombre.getText().toString().trim());
+                t.setCantidad(Textcantidad.getText().toString().trim());
+
+                userReference.child("Users").child(mAuth.getUid()).child("Tarjetas").child(tarjetSelected.getUid()).setValue(t);
+                Toast.makeText(this, "¡Tarjeta Actualizada!", Toast.LENGTH_LONG).show();
+                limpiarCajas();
                 break;
             }
 
             case R.id.icon_delete:{
-                Toast.makeText(this, "Eliminar", Toast.LENGTH_LONG).show();
+                Tarjeta t = new Tarjeta();
+                t.setUid(tarjetSelected.getUid());
+                userReference.child("Users").child(mAuth.getUid()).child("Tarjetas").child(t.getUid()).removeValue();
+                Toast.makeText(this, "¡Tarjeta eliminada!", Toast.LENGTH_LONG).show();
+                limpiarCajas();
                 break;
             }
             default:break;
