@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -29,7 +30,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-public class IngresarGastoFinal extends AppCompatActivity {
+public class IngresarGastoFinal extends AppCompatActivity{
     TextView textViewCategoryName;
     private FirebaseAuth mAuth;
     DatabaseReference mDatabase, userReference;
@@ -56,25 +57,12 @@ public class IngresarGastoFinal extends AppCompatActivity {
         gasto = findViewById(R.id.editTextNumberGastoAmount);
         nota = findViewById(R.id.editTextNotaGasto);
         spinner = findViewById(R.id.spinnerTarjetaGasto);
-        tarjetasArrayList = new ArrayList();
 
+        tarjetasArrayList = new ArrayList();
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
         userReference =  mDatabase.child("Users").child(mAuth.getUid());
         setData();
-
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView adapterView, View view, int i, long l) {
-                tarjetName = tarjetasArrayList.get(i);
-                Log.d("tarjeta", tarjetName);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView adapterView) {
-
-            }
-        });
     }
 
     public void setData()
@@ -91,12 +79,12 @@ public class IngresarGastoFinal extends AppCompatActivity {
             gasto.setEnabled(false);
         }
 
-        adapter = new ArrayAdapter<String>(this,
+        adapter = new ArrayAdapter<String>(IngresarGastoFinal.this,
                 android.R.layout.simple_spinner_item, tarjetasArrayList);
         adapter.setDropDownViewResource(android.R.layout
                 .simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
-
+        
         mDatabase.child("Users").child(mAuth.getUid()).child("Tarjetas").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DataSnapshot> task) {
@@ -140,4 +128,5 @@ public class IngresarGastoFinal extends AppCompatActivity {
         super.onUserInteraction();
         isUserInteracting = true;
     }
+
 }
