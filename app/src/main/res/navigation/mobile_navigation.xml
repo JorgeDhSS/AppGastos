@@ -25,6 +25,11 @@
     <fragment
         android:id="@+id/paginaPricipal"
         android:name="com.example.appgastos.ui.PaginaPrincipal.PaginaPrincipalFragment"
-        android:label="fragment_pagina_pricipal"
+        android:label="Página principal"
         tools:layout="@layout/fragment_pagina_principal" />
+    <fragment
+        android:id="@+id/reporte"
+        android:name="com.example.appgastos.ui.reporte.ReporteFragment"
+        android:label="Reporte de Gastos"
+        tools:layout="@layout/fragment_reporte" />
 </navigation>
