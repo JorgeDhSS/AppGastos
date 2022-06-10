@@ -90,7 +90,7 @@ public class Login extends AppCompatActivity {
                             SharedPreferences.Editor editorPreferenrences = datosUsuario.edit();
                             editorPreferenrences.putString("mail", Eduser.getText().toString().trim());
                             editorPreferenrences.commit();
-                            startActivity(new Intent(Login.this, MenuTarjetas.class));
+                            startActivity(new Intent(Login.this, MainActivity.class));
                             finish();
                         }else{
                             Toast.makeText(getApplicationContext(), "Autenticación fallida, correo o contraseña incorrectas", Toast.LENGTH_SHORT).show();
