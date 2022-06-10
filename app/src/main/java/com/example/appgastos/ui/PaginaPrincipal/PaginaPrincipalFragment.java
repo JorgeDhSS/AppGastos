@@ -13,6 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.appgastos.IngresarGasto;
+import com.example.appgastos.IngresarGastoCategoria;
 import com.example.appgastos.IngresarIngreso;
 import com.example.appgastos.Login;
 import com.example.appgastos.MainActivity;
@@ -41,6 +43,7 @@ public class PaginaPrincipalFragment extends Fragment {
         binding = FragmentPaginaPrincipalBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
         Button btn_ingreso = root.findViewById(R.id.btn_ingreso);
+        Button btn_gasto = root.findViewById(R.id.buttonGastoPrinciple);
         totalIngresos = root.findViewById(R.id.txtTotalIngresos);
         totalGastos = root.findViewById(R.id.txtGastos);
         totalSaldo = root.findViewById(R.id.saldoTotal);
@@ -53,7 +56,9 @@ public class PaginaPrincipalFragment extends Fragment {
         btn_ingreso.setOnClickListener(view -> {
             this.ingresarIngreso();
         });
-
+        btn_gasto.setOnClickListener(View -> {
+            this.ingresarGasto();
+        });
         return root;
     }
 
@@ -65,6 +70,11 @@ public class PaginaPrincipalFragment extends Fragment {
 
     private void ingresarIngreso(){
         Intent ingreso = new Intent(getActivity(), IngresarIngreso.class);
+        startActivity(ingreso);
+    }
+
+    private void ingresarGasto(){
+        Intent ingreso = new Intent(getActivity(), IngresarGastoCategoria.class);
         startActivity(ingreso);
     }
 

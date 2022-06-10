@@ -62,7 +62,6 @@
                             android:id="@+id/imageButtonTransporte"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:onClick="onclickBtnTransporte"
                             android:src="@mipmap/ic_category_transporte_foreground" />
                     </LinearLayout>
 
@@ -113,7 +112,7 @@
                             android:id="@+id/imageButtonAlimentos"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:onClick="onclickBtnAlimentos" />
+                            android:src="@mipmap/ic_category_alimentos_foreground" />
 
                     </LinearLayout>
 
@@ -163,7 +162,6 @@
                             android:id="@+id/imageButtonVivienda"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:onClick="onclickBtnVivienda"
                             android:src="@mipmap/ic_category_vivienda_foreground" />
 
                     </LinearLayout>
@@ -214,7 +212,6 @@
                             android:id="@+id/imageButtonMedicamentos"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:onClick="onclickBtnMedicamentos"
                             android:src="@mipmap/ic_category_medicamentos_foreground" />
 
                     </LinearLayout>
@@ -265,7 +262,6 @@
                             android:id="@+id/imageButtonOcio"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:onClick="onclickBtnOcio"
                             android:src="@mipmap/ic_category_ocio_foreground" />
                     </LinearLayout>
 
@@ -315,7 +311,6 @@
                             android:id="@+id/imageButtonOtros"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:onClick="onclickBtnOtros"
                             android:src="@mipmap/ic_category_other_foreground" />
                     </LinearLayout>
 

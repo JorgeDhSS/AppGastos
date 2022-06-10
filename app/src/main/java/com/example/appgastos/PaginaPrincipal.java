@@ -16,5 +16,8 @@ public class PaginaPrincipal extends AppCompatActivity {
 
     }
 
-
+    public void onclicGastos(View v){
+        Intent intent = new Intent(PaginaPrincipal.this, IngresarGasto.class);
+        startActivity(intent);
+    }
 }

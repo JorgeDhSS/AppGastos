@@ -7,6 +7,36 @@
     tools:context=".MenuTarjetas"
     android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="add"
+            app:icon="@drawable/ic_add" />
+
+        <Button
+            android:id="@+id/button19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="modify"
+            app:icon="@drawable/ic_save" />
+
+        <Button
+            android:id="@+id/button18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="deleteT"
+            app:icon="@drawable/ic_delete" />
+    </LinearLayout>
+
     <TextView
         android:id="@+id/textView63"
         android:layout_width="match_parent"

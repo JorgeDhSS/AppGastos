@@ -104,6 +104,52 @@ public class MenuTarjetas extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
+    public void add(View v)
+    {
+        String nombre = Textnombre.getText().toString();
+        String cantidad = Textcantidad.getText().toString();
+        if(!nombre.isEmpty() && !cantidad.isEmpty()){
+            if (nombre.length() > 0 ){
+
+                Tarjeta t = new Tarjeta();
+                t.setNombre(nombre);
+                t.setCantidad(cantidad);
+                t.setUid(UUID.randomUUID().toString());
+                userReference.child("Users").child(mAuth.getUid()).child("Tarjetas").child(t.getUid()).setValue(t).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull @NotNull Task<Void> task) {
+                        Toast.makeText(MenuTarjetas.this, "Tarjeta agregada", Toast.LENGTH_LONG).show();
+                        limpiarCajas();
+                    }
+                });
+            }else{
+                Toast.makeText(this, "El nombre debe tener al menos 1 caracter", Toast.LENGTH_SHORT).show();
+            }
+        }else{
+            Toast.makeText(this, "Ningun dato debe estar vacio", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void modify(View v)
+    {
+        Tarjeta t = new Tarjeta();
+        t.setUid(tarjetSelected.getUid());
+        t.setNombre(Textnombre.getText().toString().trim());
+        t.setCantidad(Textcantidad.getText().toString().trim());
+
+        userReference.child("Users").child(mAuth.getUid()).child("Tarjetas").child(tarjetSelected.getUid()).setValue(t);
+        Toast.makeText(this, "¡Tarjeta Actualizada!", Toast.LENGTH_LONG).show();
+        limpiarCajas();
+    }
+
+    public void deleteT(View v)
+    {
+        Tarjeta t = new Tarjeta();
+        t.setUid(tarjetSelected.getUid());
+        userReference.child("Users").child(mAuth.getUid()).child("Tarjetas").child(t.getUid()).removeValue();
+        Toast.makeText(this, "¡Tarjeta eliminada!", Toast.LENGTH_LONG).show();
+        limpiarCajas();
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
         String nombre = Textnombre.getText().toString();
