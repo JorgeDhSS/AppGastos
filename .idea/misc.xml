@@ -3,6 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Jazmin/Documents/AppGastos/app/src/main/res/layout/activity_main.xml" value="0.2033514492753623" />
+        <entry key="..\:/Users/Jazmin/Documents/AppGastos/app/src/main/res/layout/app_bar_main.xml" value="0.2033514492753623" />
+        <entry key="..\:/Users/Jazmin/Documents/AppGastos/app/src/main/res/layout/content_main.xml" value="0.2033514492753623" />
+        <entry key="..\:/Users/Jazmin/Documents/AppGastos/app/src/main/res/layout/fragment_home.xml" value="0.2033514492753623" />
+        <entry key="..\:/Users/Jazmin/Documents/AppGastos/app/src/main/res/layout/fragment_pagina_principal.xml" value="0.2033514492753623" />
+        <entry key="..\:/Users/Jazmin/Documents/AppGastos/app/src/main/res/layout/fragment_reporte.xml" value="0.2033514492753623" />
+        <entry key="..\:/Users/Jazmin/Documents/AppGastos/app/src/main/res/layout/fragment_rutina_categorias.xml" value="0.2033514492753623" />
+        <entry key="..\:/Users/Jazmin/Documents/AppGastos/app/src/main/res/layout/progresslayout.xml" value="0.2033514492753623" />
+        <entry key="..\:/Users/Jazmin/Documents/AppGastos/app/src/main/res/menu/activity_main_drawer.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/WIN 10/Documents/Proyecto Movil/AppGastos/app/src/main/res/layout/activity_anuncios.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/WIN 10/Documents/Proyecto Movil/AppGastos/app/src/main/res/layout/activity_ingresar_gasto.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/WIN 10/Documents/Proyecto Movil/AppGastos/app/src/main/res/layout/activity_ingresar_gasto_final.xml" value="0.1" />
