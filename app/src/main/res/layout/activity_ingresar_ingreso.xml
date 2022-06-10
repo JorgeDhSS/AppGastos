@@ -2,9 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/guardarIngreso"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".IngresarIngreso">
+    tools:context=".IngresarIngreso"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="1dp">
 
     <TextView
         android:id="@+id/textView29"
@@ -37,6 +40,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="24dp"
         android:ems="10"
+        android:hint="$0.00"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,73 +48,57 @@
 
     <EditText
         android:id="@+id/nota"
-        android:layout_width="317dp"
+        android:layout_width="260dp"
         android:layout_height="50dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
+        android:hint="Nota"
         android:inputType="textPersonName"
-        android:text="           Nota"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.708"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/efectivo" />
 
     <Spinner
         android:id="@+id/efectivo"
-        android:layout_width="314dp"
+        android:layout_width="260dp"
         android:layout_height="53dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="28dp"
+        android:entries="@array/tipoIngreso"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.708"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nuevoIngreso" />
 
-    <Spinner
-        android:id="@+id/calendario"
-        android:layout_width="316dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="24dp"
+    <Button
+        android:id="@+id/btnGuardarIngreso"
+        android:layout_width="212dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="120dp"
+        android:text="Guardar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nota" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="212dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="97dp"
-        android:text="Guardar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calendario" />
-
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="53dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="260dp"
+        android:layout_width="47dp"
+        android:layout_height="51dp"
+        android:layout_marginEnd="268dp"
         app:layout_constraintEnd_toEndOf="@+id/efectivo"
         app:layout_constraintTop_toTopOf="@+id/efectivo"
-        app:srcCompat="@drawable/button_background" />
+        app:srcCompat="@drawable/finance_money_coin_bill_cash_payment_icon_141995" />
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="65dp"
-        android:layout_height="51dp"
+        android:layout_width="56dp"
+        android:layout_height="41dp"
         android:layout_marginTop="4dp"
-        android:layout_marginEnd="252dp"
+        android:layout_marginEnd="268dp"
         app:layout_constraintEnd_toEndOf="@+id/nota"
         app:layout_constraintTop_toTopOf="@+id/nota"
-        app:srcCompat="@drawable/button_background" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="65dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="1dp"
-        app:layout_constraintStart_toStartOf="@+id/calendario"
-        app:layout_constraintTop_toTopOf="@+id/calendario"
-        app:srcCompat="@drawable/button_background" />
+        app:srcCompat="@drawable/_983240" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
