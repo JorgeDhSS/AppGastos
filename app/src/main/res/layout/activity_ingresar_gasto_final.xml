@@ -7,109 +7,127 @@
     tools:context=".IngresarGastoFinal">
 
     <TextView
-        android:id="@+id/textView42"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="$xxx.xxx pesos en"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView41" />
-
-    <TextView
-        android:id="@+id/textView40"
-        android:layout_width="103dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="16dp"
-        android:text="Nuevo Gasto"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/textView41"
         android:layout_width="296dp"
         android:layout_height="90dp"
         android:layout_marginTop="32dp"
-        android:text="La aplicación tiene conocimiento de que usted gasta"
+        android:text="Complete los siguientes datos sobre su gasto"
         android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView40" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="94dp"
-        android:layout_height="102dp"
-        android:layout_marginTop="28dp"
+        android:id="@+id/imageViewCategoryGastoFinal"
+        android:layout_width="188dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView42"
-        app:srcCompat="@mipmap/ic_category_ocio_foreground" />
+        app:layout_constraintTop_toBottomOf="@+id/textView41"
+        app:srcCompat="@mipmap/ic_category_alimentos_foreground" />
 
     <TextView
-        android:id="@+id/textView43"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:id="@+id/textViewCategoryNameGastoFinal"
+        android:layout_width="267dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="16dp"
         android:text="Ocio"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView12" />
-
-    <TextView
-        android:id="@+id/textView44"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="37dp"
-        android:text="Complete los siguientes datos"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView43" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewCategoryGastoFinal" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName6"
-        android:layout_width="273dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="18dp"
+        android:id="@+id/editTextNotaGasto"
+        android:layout_width="319dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="49dp"
+        android:backgroundTint="@color/teal_700"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="        Nota"
+        android:textColor="@color/teal_700"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView44" />
+        app:layout_constraintTop_toBottomOf="@+id/textView40" />
 
     <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="273dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="21dp"
+        android:id="@+id/spinnerTarjetaGasto"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="319dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="49dp"
+        android:backgroundTint="@color/teal_700"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView42" />
+
+    <EditText
+        android:id="@+id/editTextNumberGastoAmount"
+        android:layout_width="319dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="49dp"
+        android:backgroundTint="@color/teal_700"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textColor="@color/teal_700"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="20dp"
+        android:text="Gasto"
+        android:textColor="@color/teal_700"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCategoryNameGastoFinal" />
+
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="16dp"
+        android:text="Nota"
+        android:textColor="@color/teal_700"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberGastoAmount" />
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="16dp"
+        android:text="Tarjeta"
+        android:textColor="@color/teal_700"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNotaGasto" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="201dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_background"
+        android:onClick="guardarGasto"
+        android:text="Guardar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerTarjetaGasto" />
 
-    <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="44dp"
-        android:layout_height="44dp"
-        app:srcCompat="@drawable/button_background"
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="494dp" />
-
-    <ImageView
-        android:id="@+id/imageView14"
-        android:layout_width="51dp"
-        android:layout_height="42dp"
-        app:srcCompat="@drawable/button_background"
-        tools:layout_editor_absoluteX="62dp"
-        tools:layout_editor_absoluteY="558dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
