@@ -62,7 +62,7 @@ public class RegistroUsuario extends AppCompatActivity {
                 edad= Ededad.getText().toString();
 
 
-                if(!nombre.isEmpty() && !email.isEmpty() && !password.isEmpty()){
+                if(!nombre.isEmpty() && !email.isEmpty() && !password.isEmpty() && !edad.isEmpty()){
 
                     if (password.length() >=8 ){
                         registrarUsuario();
@@ -99,23 +99,20 @@ public class RegistroUsuario extends AppCompatActivity {
                     String id = mAuth.getCurrentUser().getUid();
 
                     Map<String, Object> map = new HashMap<>();
-                    map.put("id", id);
                     map.put("nombre", nombre);
                     map.put("edad", edad);
                     map.put("email", email);
                     map.put("password", password);
-                    map.put("Tarjetas", " ");
 
                     mDatabase.child("Users").child(id).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task2) {
                             if (task2.isSuccessful()){
 
-                                Intent intent = new Intent(RegistroUsuario.this, RegistroTarjeta.class);
-                                intent.putExtra("id_usuario", id);
+                                Intent intent = new Intent(RegistroUsuario.this, Login.class);
                                 startActivity(intent);
+                                Toast.makeText(RegistroUsuario.this, "¡Registro Exitoso!", Toast.LENGTH_SHORT).show();
                                 finish();
-                                //startActivity(new Intent(RegistroUsuario.this, MainActivity.class));
 
                             }else{
                                 Toast.makeText(RegistroUsuario.this, "No se pudieron crear los datos correctamente", Toast.LENGTH_SHORT).show();
@@ -124,7 +121,7 @@ public class RegistroUsuario extends AppCompatActivity {
                         }
                     });
                 }else{
-                    Toast.makeText(RegistroUsuario.this, "No se pudo registrar el usuario, intente nuevamente", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegistroUsuario.this, "El correo ya ha sido registrado", Toast.LENGTH_SHORT).show();
 
 
                 }

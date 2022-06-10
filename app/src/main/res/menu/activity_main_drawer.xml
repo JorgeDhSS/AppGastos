@@ -13,11 +13,12 @@
             android:icon="@drawable/ic_menu_gallery"
             android:title="Categorías" />
         <item
-            android:id="@+id/nav_report"
+            android:id="@+id/reporte"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Reporte de gastos" />
         <item
-            android:id="@+id/nav_cards"
-            android:title="nav_cards" />
+            android:id="@+id/tarjetas"
+            android:icon="@drawable/_922888"
+            android:title="Tarjetas" />
     </group>
 </menu>

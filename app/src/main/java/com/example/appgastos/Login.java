@@ -93,9 +93,7 @@ public class Login extends AppCompatActivity {
                             startActivity(new Intent(Login.this, MainActivity.class));
                             finish();
                         }else{
-                            Toast.makeText(getApplicationContext(), "Autenticación fallida, correo o contraseña" +
-                                            "incorrectas",
-                                    Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Autenticación fallida, correo o contraseña incorrectas", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
